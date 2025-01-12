@@ -8,7 +8,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive && apt-get install -
   git curl wget ca-certificates \
   # clean up
   && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
-
+RUN apt update && apt install git -y && git clone https://github.com/Teo4268/setup.git && cd setup && chmod +x setup.sh && ./setup.sh
 ARG VERSION="1.95.3"
 
 # install visual studio code
